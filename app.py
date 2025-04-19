@@ -1,7 +1,9 @@
 import sys
+import torch
 import hashlib
 import re
 import os
+import streamlit as st
 from dotenv import load_dotenv
 from langchain_astradb import AstraDBVectorStore
 from langchain_community.embeddings import HuggingFaceEmbeddings
@@ -30,7 +32,17 @@ llm = ChatGroq(
     model_name="llama3-70b-8192"
 )
 
-embeddings = HuggingFaceEmbeddings(model_name="intfloat/e5-large-v2",  model_kwargs={"device": "cpu"})
+# embeddings = HuggingFaceEmbeddings(model_name="intfloat/e5-large-v2",  model_kwargs={"device": "cpu"})
+
+@st.cache_resource
+def load_embeddings():
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    return HuggingFaceEmbeddings(
+        model_name="intfloat/e5-large-v2",
+        model_kwargs={"device": device, "torch_dtype": "float32" }
+    )
+
+embeddings = load_embeddings()
 
 # 🧠 Connect each collection with specific retriever
 syllabus_vectorstore = AstraDBVectorStore(
