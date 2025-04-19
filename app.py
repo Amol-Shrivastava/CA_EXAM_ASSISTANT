@@ -39,7 +39,7 @@ def load_embeddings():
     device = "cuda" if torch.cuda.is_available() else "cpu"
     return HuggingFaceEmbeddings(
         model_name="intfloat/e5-large-v2",
-        model_kwargs={"device": device, "torch_dtype": "float32" }
+        model_kwargs={"device": device}
     )
 
 embeddings = load_embeddings()
