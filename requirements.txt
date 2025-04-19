@@ -3,7 +3,11 @@ langchain-community
 langchain-astradb
 cassandra-driver
 datasets
-sentence-transformers==2.2.2
+sentence-transformers
 pymupdf
 astrapy
+streamlit
+matplotlib
+langchain-astradb
+langchain-groq
 
