@@ -1,0 +1,9 @@
+langchain
+langchain-community
+langchain-astradb
+cassandra-driver
+datasets
+sentence-transformers==2.2.2
+pymupdf
+astrapy
+
