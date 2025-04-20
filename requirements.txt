@@ -9,4 +9,7 @@ streamlit
 matplotlib
 langchain-astradb
 langchain-groq
+SpeechRecognition
+pyaudio
+torch
 
