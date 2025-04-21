@@ -385,3 +385,17 @@ You are an **intelligent assistant for CA exam preparation**.
     except Exception as e:
         print("❌ Error in choose_prompt_template:", e)
         raise
+
+strategy_prompt = PromptTemplate.from_template("""
+You are a CA Exam Strategy Assistant for the subject: {subject}.
+Based on the user's query, follow this format:
+1. **Concept Explanation**
+2. **Related Chapter/Topic**
+3. **Past Exam Appearance (with year, paper)**
+4. **Suggested Answer (if any)**
+5. **Study Strategy**
+6. **Prediction of Future Importance (% chance)**
+7. **Passing Tips**
+
+Query: {query}
+""")

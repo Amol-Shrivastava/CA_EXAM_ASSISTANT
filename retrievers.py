@@ -1,5 +1,10 @@
 from langchain_astradb import AstraDBVectorStore
-from langchain_community.embeddings import HuggingFaceEmbeddings
+try:
+    from langchain_huggingface import HuggingFaceEmbeddings
+except Exception as e:
+    import traceback
+    print("⚠️ Error importing HuggingFaceEmbeddings:")
+    traceback.print_exc()
 
 embeddings = HuggingFaceEmbeddings(model_name="intfloat/e5-large-v2", model_kwargs={"device": "cpu"})
 

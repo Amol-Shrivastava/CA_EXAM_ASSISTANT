@@ -12,4 +12,9 @@ langchain-groq
 SpeechRecognition
 pyaudio
 torch
-
+langchain-huggingface
+rich
+pytesseract
+opencv-python
+pillow
+reportlab
