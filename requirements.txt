@@ -10,7 +10,7 @@ matplotlib
 langchain-astradb
 langchain-groq
 SpeechRecognition
-pyaudio
+sounddevice
 torch
 langchain-huggingface
 rich

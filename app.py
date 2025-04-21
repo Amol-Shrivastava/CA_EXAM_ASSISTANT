@@ -16,6 +16,9 @@ import os
 from io import BytesIO
 from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
+import sounddevice as sd
+import numpy as np
+import speech_recognition as sr
 
 # Setup logging
 logging.basicConfig(filename="app.log", level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
@@ -205,19 +208,47 @@ Query: {query}
 """)
 
 
+# def transcribe_speech():
+#     recognizer = sr.Recognizer()
+#     with sr.Microphone() as source:
+#         st.info("Listening... Speak now")
+#         try:
+#             audio = recognizer.listen(source, timeout=5)
+#             return recognizer.recognize_google(audio)
+#         except sr.UnknownValueError:
+#             st.error("Could not understand audio")
+#         except sr.RequestError as e:
+#             st.error(f"Speech recognition error: {e}")
+#         except Exception as e:
+#             logger.error("Speech-to-text error: %s", e, exc_info=True)
+
+# Parameters for sounddevice
+SAMPLE_RATE = 16000
+CHANNELS = 1
+DURATION = 5  # seconds
+
 def transcribe_speech():
     recognizer = sr.Recognizer()
-    with sr.Microphone() as source:
-        st.info("Listening... Speak now")
-        try:
-            audio = recognizer.listen(source, timeout=5)
-            return recognizer.recognize_google(audio)
-        except sr.UnknownValueError:
-            st.error("Could not understand audio")
-        except sr.RequestError as e:
-            st.error(f"Speech recognition error: {e}")
-        except Exception as e:
-            logger.error("Speech-to-text error: %s", e, exc_info=True)
+
+    # Recording with sounddevice
+    st.info("Listening... Speak now")
+    try:
+        # Record audio using sounddevice
+        audio_data = sd.rec(int(DURATION * SAMPLE_RATE), samplerate=SAMPLE_RATE, channels=CHANNELS, dtype='int16')
+        sd.wait()  # Wait for the recording to finish
+        
+        # Convert the audio data to an audio file format for speech recognition
+        audio = sr.AudioData(audio_data.tobytes(), SAMPLE_RATE, 2)  # Convert to audio data
+
+        # Recognize speech using Google's API
+        return recognizer.recognize_google(audio)
+    
+    except sr.UnknownValueError:
+        st.error("Could not understand audio")
+    except sr.RequestError as e:
+        st.error(f"Speech recognition error: {e}")
+    except Exception as e:
+        logger.error("Speech-to-text error: %s", e, exc_info=True)
 
 def generate_pdf(response_text):
     # Create a BytesIO buffer to hold the PDF data
