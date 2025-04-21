@@ -395,3 +395,189 @@ groq.BadRequestError: Error code: 400 - {'error': {'message': 'The model `mixtra
 2025-04-21 23:15:28,710 [INFO] HTTP Request: POST https://2e6be58e-cf58-4723-86ea-2deee684b015-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace/chapters "HTTP/1.1 200 OK"
 2025-04-21 23:15:28,710 [INFO] cursor finished fetching a page: (empty page state) from chapters
 2025-04-21 23:15:30,281 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-21 23:24:43,424 [INFO] Load pretrained SentenceTransformer: intfloat/e5-large-v2
+2025-04-21 23:24:49,635 [INFO] vector store default init, collection 'chapters'
+2025-04-21 23:24:59,317 [INFO] Load pretrained SentenceTransformer: intfloat/e5-large-v2
+2025-04-21 23:25:16,975 [INFO] vector store default init, collection 'audit_syllabus'
+2025-04-21 23:25:28,459 [INFO] Attempting to fetch token from environment variable 'ASTRA_DB_APPLICATION_TOKEN'
+2025-04-21 23:25:28,478 [INFO] Attempting to fetch API endpoint from environment variable 'ASTRA_DB_API_ENDPOINT'
+2025-04-21 23:25:28,478 [INFO] Attempting to fetch token from environment variable 'ASTRA_DB_APPLICATION_TOKEN'
+2025-04-21 23:25:28,479 [INFO] Attempting to fetch keyspace from environment variable 'ASTRA_DB_KEYSPACE'
+2025-04-21 23:25:28,479 [INFO] Attempting to fetch API endpoint from environment variable 'ASTRA_DB_API_ENDPOINT'
+2025-04-21 23:25:28,482 [INFO] Detecting API environment 'prod' from supplied endpoint
+2025-04-21 23:25:28,482 [INFO] Attempting to fetch keyspace from environment variable 'ASTRA_DB_KEYSPACE'
+2025-04-21 23:25:28,513 [INFO] Detecting API environment 'prod' from supplied endpoint
+2025-04-21 23:25:33,996 [INFO] createCollection('chapters')
+2025-04-21 23:25:34,029 [INFO] createCollection('audit_syllabus')
+2025-04-21 23:25:36,850 [INFO] HTTP Request: POST https://2e6be58e-cf58-4723-86ea-2deee684b015-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace "HTTP/1.1 200 OK"
+2025-04-21 23:25:36,856 [INFO] HTTP Request: POST https://2e6be58e-cf58-4723-86ea-2deee684b015-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace "HTTP/1.1 200 OK"
+2025-04-21 23:25:36,861 [INFO] finished createCollection('chapters')
+2025-04-21 23:25:36,861 [INFO] finished createCollection('audit_syllabus')
+2025-04-21 23:25:38,712 [INFO] vector store default init, collection 'audit_question_papers'
+2025-04-21 23:25:38,721 [INFO] vector store default init, collection 'previous_papers'
+2025-04-21 23:25:40,082 [INFO] Attempting to fetch token from environment variable 'ASTRA_DB_APPLICATION_TOKEN'
+2025-04-21 23:25:40,082 [INFO] Attempting to fetch API endpoint from environment variable 'ASTRA_DB_API_ENDPOINT'
+2025-04-21 23:25:40,082 [INFO] Attempting to fetch keyspace from environment variable 'ASTRA_DB_KEYSPACE'
+2025-04-21 23:25:40,082 [INFO] Detecting API environment 'prod' from supplied endpoint
+2025-04-21 23:25:40,148 [INFO] Attempting to fetch token from environment variable 'ASTRA_DB_APPLICATION_TOKEN'
+2025-04-21 23:25:40,148 [INFO] Attempting to fetch API endpoint from environment variable 'ASTRA_DB_API_ENDPOINT'
+2025-04-21 23:25:40,148 [INFO] Attempting to fetch keyspace from environment variable 'ASTRA_DB_KEYSPACE'
+2025-04-21 23:25:40,149 [INFO] Detecting API environment 'prod' from supplied endpoint
+2025-04-21 23:25:47,656 [INFO] createCollection('audit_question_papers')
+2025-04-21 23:25:47,694 [INFO] createCollection('previous_papers')
+2025-04-21 23:25:50,432 [INFO] HTTP Request: POST https://2e6be58e-cf58-4723-86ea-2deee684b015-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace "HTTP/1.1 200 OK"
+2025-04-21 23:25:50,433 [INFO] finished createCollection('previous_papers')
+2025-04-21 23:25:50,434 [INFO] HTTP Request: POST https://2e6be58e-cf58-4723-86ea-2deee684b015-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace "HTTP/1.1 200 OK"
+2025-04-21 23:25:50,435 [INFO] finished createCollection('audit_question_papers')
+2025-04-21 23:26:09,101 [INFO] Load pretrained SentenceTransformer: intfloat/e5-large-v2
+2025-04-21 23:26:14,515 [INFO] vector store default init, collection 'audit_syllabus'
+2025-04-21 23:26:15,263 [INFO] Attempting to fetch token from environment variable 'ASTRA_DB_APPLICATION_TOKEN'
+2025-04-21 23:26:15,263 [INFO] Attempting to fetch API endpoint from environment variable 'ASTRA_DB_API_ENDPOINT'
+2025-04-21 23:26:15,263 [INFO] Attempting to fetch keyspace from environment variable 'ASTRA_DB_KEYSPACE'
+2025-04-21 23:26:15,263 [INFO] Detecting API environment 'prod' from supplied endpoint
+2025-04-21 23:26:19,142 [INFO] createCollection('audit_syllabus')
+2025-04-21 23:26:21,903 [INFO] HTTP Request: POST https://2e6be58e-cf58-4723-86ea-2deee684b015-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace "HTTP/1.1 200 OK"
+2025-04-21 23:26:21,904 [INFO] finished createCollection('audit_syllabus')
+2025-04-21 23:26:23,016 [INFO] vector store default init, collection 'audit_question_papers'
+2025-04-21 23:26:23,371 [INFO] Attempting to fetch token from environment variable 'ASTRA_DB_APPLICATION_TOKEN'
+2025-04-21 23:26:23,371 [INFO] Attempting to fetch API endpoint from environment variable 'ASTRA_DB_API_ENDPOINT'
+2025-04-21 23:26:23,371 [INFO] Attempting to fetch keyspace from environment variable 'ASTRA_DB_KEYSPACE'
+2025-04-21 23:26:23,371 [INFO] Detecting API environment 'prod' from supplied endpoint
+2025-04-21 23:26:27,227 [INFO] createCollection('audit_question_papers')
+2025-04-21 23:26:29,950 [INFO] HTTP Request: POST https://2e6be58e-cf58-4723-86ea-2deee684b015-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace "HTTP/1.1 200 OK"
+2025-04-21 23:26:29,951 [INFO] finished createCollection('audit_question_papers')
+2025-04-21 23:26:38,099 [INFO] Load pretrained SentenceTransformer: intfloat/e5-large-v2
+2025-04-21 23:26:41,413 [INFO] vector store default init, collection 'audit_syllabus'
+2025-04-21 23:26:42,191 [INFO] Attempting to fetch token from environment variable 'ASTRA_DB_APPLICATION_TOKEN'
+2025-04-21 23:26:42,191 [INFO] Attempting to fetch API endpoint from environment variable 'ASTRA_DB_API_ENDPOINT'
+2025-04-21 23:26:42,191 [INFO] Attempting to fetch keyspace from environment variable 'ASTRA_DB_KEYSPACE'
+2025-04-21 23:26:42,191 [INFO] Detecting API environment 'prod' from supplied endpoint
+2025-04-21 23:26:46,088 [INFO] createCollection('audit_syllabus')
+2025-04-21 23:26:48,810 [INFO] HTTP Request: POST https://2e6be58e-cf58-4723-86ea-2deee684b015-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace "HTTP/1.1 200 OK"
+2025-04-21 23:26:48,812 [INFO] finished createCollection('audit_syllabus')
+2025-04-21 23:26:49,973 [INFO] vector store default init, collection 'audit_question_papers'
+2025-04-21 23:26:50,342 [INFO] Attempting to fetch token from environment variable 'ASTRA_DB_APPLICATION_TOKEN'
+2025-04-21 23:26:50,342 [INFO] Attempting to fetch API endpoint from environment variable 'ASTRA_DB_API_ENDPOINT'
+2025-04-21 23:26:50,342 [INFO] Attempting to fetch keyspace from environment variable 'ASTRA_DB_KEYSPACE'
+2025-04-21 23:26:50,342 [INFO] Detecting API environment 'prod' from supplied endpoint
+2025-04-21 23:26:54,238 [INFO] createCollection('audit_question_papers')
+2025-04-21 23:26:57,033 [INFO] HTTP Request: POST https://2e6be58e-cf58-4723-86ea-2deee684b015-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace "HTTP/1.1 200 OK"
+2025-04-21 23:26:57,035 [INFO] finished createCollection('audit_question_papers')
+2025-04-21 23:26:58,505 [INFO] Load pretrained SentenceTransformer: intfloat/e5-large-v2
+2025-04-21 23:27:01,933 [INFO] vector store default init, collection 'audit_syllabus'
+2025-04-21 23:27:02,674 [INFO] Attempting to fetch token from environment variable 'ASTRA_DB_APPLICATION_TOKEN'
+2025-04-21 23:27:02,675 [INFO] Attempting to fetch API endpoint from environment variable 'ASTRA_DB_API_ENDPOINT'
+2025-04-21 23:27:02,675 [INFO] Attempting to fetch keyspace from environment variable 'ASTRA_DB_KEYSPACE'
+2025-04-21 23:27:02,675 [INFO] Detecting API environment 'prod' from supplied endpoint
+2025-04-21 23:27:06,716 [INFO] createCollection('audit_syllabus')
+2025-04-21 23:27:09,447 [INFO] HTTP Request: POST https://2e6be58e-cf58-4723-86ea-2deee684b015-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace "HTTP/1.1 200 OK"
+2025-04-21 23:27:09,448 [INFO] finished createCollection('audit_syllabus')
+2025-04-21 23:27:10,796 [INFO] vector store default init, collection 'audit_question_papers'
+2025-04-21 23:27:11,194 [INFO] Attempting to fetch token from environment variable 'ASTRA_DB_APPLICATION_TOKEN'
+2025-04-21 23:27:11,194 [INFO] Attempting to fetch API endpoint from environment variable 'ASTRA_DB_API_ENDPOINT'
+2025-04-21 23:27:11,195 [INFO] Attempting to fetch keyspace from environment variable 'ASTRA_DB_KEYSPACE'
+2025-04-21 23:27:11,195 [INFO] Detecting API environment 'prod' from supplied endpoint
+2025-04-21 23:27:15,142 [INFO] createCollection('audit_question_papers')
+2025-04-21 23:27:17,852 [INFO] HTTP Request: POST https://2e6be58e-cf58-4723-86ea-2deee684b015-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace "HTTP/1.1 200 OK"
+2025-04-21 23:27:17,852 [INFO] finished createCollection('audit_question_papers')
+2025-04-21 23:27:48,546 [INFO] Load pretrained SentenceTransformer: intfloat/e5-large-v2
+2025-04-21 23:27:51,926 [INFO] vector store default init, collection 'audit_syllabus'
+2025-04-21 23:27:52,665 [INFO] Attempting to fetch token from environment variable 'ASTRA_DB_APPLICATION_TOKEN'
+2025-04-21 23:27:52,665 [INFO] Attempting to fetch API endpoint from environment variable 'ASTRA_DB_API_ENDPOINT'
+2025-04-21 23:27:52,665 [INFO] Attempting to fetch keyspace from environment variable 'ASTRA_DB_KEYSPACE'
+2025-04-21 23:27:52,665 [INFO] Detecting API environment 'prod' from supplied endpoint
+2025-04-21 23:27:56,447 [INFO] createCollection('audit_syllabus')
+2025-04-21 23:27:59,195 [INFO] HTTP Request: POST https://2e6be58e-cf58-4723-86ea-2deee684b015-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace "HTTP/1.1 200 OK"
+2025-04-21 23:27:59,196 [INFO] finished createCollection('audit_syllabus')
+2025-04-21 23:28:00,337 [INFO] vector store default init, collection 'audit_question_papers'
+2025-04-21 23:28:00,702 [INFO] Attempting to fetch token from environment variable 'ASTRA_DB_APPLICATION_TOKEN'
+2025-04-21 23:28:00,702 [INFO] Attempting to fetch API endpoint from environment variable 'ASTRA_DB_API_ENDPOINT'
+2025-04-21 23:28:00,702 [INFO] Attempting to fetch keyspace from environment variable 'ASTRA_DB_KEYSPACE'
+2025-04-21 23:28:00,702 [INFO] Detecting API environment 'prod' from supplied endpoint
+2025-04-21 23:28:04,534 [INFO] createCollection('audit_question_papers')
+2025-04-21 23:28:07,283 [INFO] HTTP Request: POST https://2e6be58e-cf58-4723-86ea-2deee684b015-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace "HTTP/1.1 200 OK"
+2025-04-21 23:28:07,285 [INFO] finished createCollection('audit_question_papers')
+2025-04-21 23:28:11,264 [INFO] cursor fetching a page: (empty page state) from audit_syllabus
+2025-04-21 23:28:12,415 [INFO] HTTP Request: POST https://2e6be58e-cf58-4723-86ea-2deee684b015-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace/audit_syllabus "HTTP/1.1 200 OK"
+2025-04-21 23:28:12,417 [INFO] cursor finished fetching a page: (empty page state) from audit_syllabus
+2025-04-21 23:28:14,839 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-21 23:29:18,923 [INFO] Load pretrained SentenceTransformer: intfloat/e5-large-v2
+2025-04-21 23:29:22,423 [INFO] vector store default init, collection 'audit_syllabus'
+2025-04-21 23:29:23,189 [INFO] Attempting to fetch token from environment variable 'ASTRA_DB_APPLICATION_TOKEN'
+2025-04-21 23:29:23,189 [INFO] Attempting to fetch API endpoint from environment variable 'ASTRA_DB_API_ENDPOINT'
+2025-04-21 23:29:23,189 [INFO] Attempting to fetch keyspace from environment variable 'ASTRA_DB_KEYSPACE'
+2025-04-21 23:29:23,190 [INFO] Detecting API environment 'prod' from supplied endpoint
+2025-04-21 23:29:28,594 [INFO] createCollection('audit_syllabus')
+2025-04-21 23:29:31,336 [INFO] HTTP Request: POST https://2e6be58e-cf58-4723-86ea-2deee684b015-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace "HTTP/1.1 200 OK"
+2025-04-21 23:29:31,338 [INFO] finished createCollection('audit_syllabus')
+2025-04-21 23:29:32,468 [INFO] vector store default init, collection 'audit_question_papers'
+2025-04-21 23:29:32,817 [INFO] Attempting to fetch token from environment variable 'ASTRA_DB_APPLICATION_TOKEN'
+2025-04-21 23:29:32,818 [INFO] Attempting to fetch API endpoint from environment variable 'ASTRA_DB_API_ENDPOINT'
+2025-04-21 23:29:32,818 [INFO] Attempting to fetch keyspace from environment variable 'ASTRA_DB_KEYSPACE'
+2025-04-21 23:29:32,818 [INFO] Detecting API environment 'prod' from supplied endpoint
+2025-04-21 23:29:37,077 [INFO] createCollection('audit_question_papers')
+2025-04-21 23:29:39,832 [INFO] HTTP Request: POST https://2e6be58e-cf58-4723-86ea-2deee684b015-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace "HTTP/1.1 200 OK"
+2025-04-21 23:29:39,834 [INFO] finished createCollection('audit_question_papers')
+2025-04-21 23:29:42,907 [INFO] cursor fetching a page: (empty page state) from audit_syllabus
+2025-04-21 23:29:43,395 [INFO] HTTP Request: POST https://2e6be58e-cf58-4723-86ea-2deee684b015-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace/audit_syllabus "HTTP/1.1 200 OK"
+2025-04-21 23:29:43,396 [INFO] cursor finished fetching a page: (empty page state) from audit_syllabus
+2025-04-21 23:29:46,351 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-21 23:51:18,608 [INFO] Load pretrained SentenceTransformer: intfloat/e5-large-v2
+2025-04-21 23:51:23,111 [INFO] vector store default init, collection 'chapters'
+2025-04-21 23:51:36,348 [INFO] Attempting to fetch token from environment variable 'ASTRA_DB_APPLICATION_TOKEN'
+2025-04-21 23:51:36,349 [INFO] Attempting to fetch API endpoint from environment variable 'ASTRA_DB_API_ENDPOINT'
+2025-04-21 23:51:36,350 [INFO] Attempting to fetch keyspace from environment variable 'ASTRA_DB_KEYSPACE'
+2025-04-21 23:51:36,352 [INFO] Detecting API environment 'prod' from supplied endpoint
+2025-04-21 23:51:40,251 [INFO] createCollection('chapters')
+2025-04-21 23:51:43,155 [INFO] HTTP Request: POST https://2e6be58e-cf58-4723-86ea-2deee684b015-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace "HTTP/1.1 200 OK"
+2025-04-21 23:51:43,157 [INFO] finished createCollection('chapters')
+2025-04-21 23:51:44,300 [INFO] vector store default init, collection 'previous_papers'
+2025-04-21 23:51:44,968 [INFO] Attempting to fetch token from environment variable 'ASTRA_DB_APPLICATION_TOKEN'
+2025-04-21 23:51:44,986 [INFO] Attempting to fetch API endpoint from environment variable 'ASTRA_DB_API_ENDPOINT'
+2025-04-21 23:51:44,986 [INFO] Attempting to fetch keyspace from environment variable 'ASTRA_DB_KEYSPACE'
+2025-04-21 23:51:44,986 [INFO] Detecting API environment 'prod' from supplied endpoint
+2025-04-21 23:51:50,005 [INFO] createCollection('previous_papers')
+2025-04-21 23:51:52,723 [INFO] HTTP Request: POST https://2e6be58e-cf58-4723-86ea-2deee684b015-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace "HTTP/1.1 200 OK"
+2025-04-21 23:51:52,724 [INFO] finished createCollection('previous_papers')
+2025-04-21 23:52:04,150 [INFO] Load pretrained SentenceTransformer: intfloat/e5-large-v2
+2025-04-21 23:52:08,130 [INFO] vector store default init, collection 'chapters'
+2025-04-21 23:52:08,908 [INFO] Attempting to fetch token from environment variable 'ASTRA_DB_APPLICATION_TOKEN'
+2025-04-21 23:52:08,908 [INFO] Attempting to fetch API endpoint from environment variable 'ASTRA_DB_API_ENDPOINT'
+2025-04-21 23:52:08,908 [INFO] Attempting to fetch keyspace from environment variable 'ASTRA_DB_KEYSPACE'
+2025-04-21 23:52:08,908 [INFO] Detecting API environment 'prod' from supplied endpoint
+2025-04-21 23:52:12,914 [INFO] createCollection('chapters')
+2025-04-21 23:52:15,698 [INFO] HTTP Request: POST https://2e6be58e-cf58-4723-86ea-2deee684b015-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace "HTTP/1.1 200 OK"
+2025-04-21 23:52:15,700 [INFO] finished createCollection('chapters')
+2025-04-21 23:52:16,825 [INFO] vector store default init, collection 'previous_papers'
+2025-04-21 23:52:17,207 [INFO] Attempting to fetch token from environment variable 'ASTRA_DB_APPLICATION_TOKEN'
+2025-04-21 23:52:17,207 [INFO] Attempting to fetch API endpoint from environment variable 'ASTRA_DB_API_ENDPOINT'
+2025-04-21 23:52:17,207 [INFO] Attempting to fetch keyspace from environment variable 'ASTRA_DB_KEYSPACE'
+2025-04-21 23:52:17,207 [INFO] Detecting API environment 'prod' from supplied endpoint
+2025-04-21 23:52:21,003 [INFO] createCollection('previous_papers')
+2025-04-21 23:52:23,701 [INFO] HTTP Request: POST https://2e6be58e-cf58-4723-86ea-2deee684b015-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace "HTTP/1.1 200 OK"
+2025-04-21 23:52:23,702 [INFO] finished createCollection('previous_papers')
+2025-04-21 23:52:34,036 [INFO] cursor fetching a page: (empty page state) from chapters
+2025-04-21 23:52:35,290 [INFO] HTTP Request: POST https://2e6be58e-cf58-4723-86ea-2deee684b015-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace/chapters "HTTP/1.1 200 OK"
+2025-04-21 23:52:35,293 [INFO] cursor finished fetching a page: (empty page state) from chapters
+2025-04-21 23:52:37,868 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-21 23:52:58,252 [INFO] Load pretrained SentenceTransformer: intfloat/e5-large-v2
+2025-04-21 23:53:01,648 [INFO] vector store default init, collection 'chapters'
+2025-04-21 23:53:02,386 [INFO] Attempting to fetch token from environment variable 'ASTRA_DB_APPLICATION_TOKEN'
+2025-04-21 23:53:02,386 [INFO] Attempting to fetch API endpoint from environment variable 'ASTRA_DB_API_ENDPOINT'
+2025-04-21 23:53:02,386 [INFO] Attempting to fetch keyspace from environment variable 'ASTRA_DB_KEYSPACE'
+2025-04-21 23:53:02,386 [INFO] Detecting API environment 'prod' from supplied endpoint
+2025-04-21 23:53:06,212 [INFO] createCollection('chapters')
+2025-04-21 23:53:08,970 [INFO] HTTP Request: POST https://2e6be58e-cf58-4723-86ea-2deee684b015-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace "HTTP/1.1 200 OK"
+2025-04-21 23:53:08,972 [INFO] finished createCollection('chapters')
+2025-04-21 23:53:10,079 [INFO] vector store default init, collection 'previous_papers'
+2025-04-21 23:53:10,440 [INFO] Attempting to fetch token from environment variable 'ASTRA_DB_APPLICATION_TOKEN'
+2025-04-21 23:53:10,441 [INFO] Attempting to fetch API endpoint from environment variable 'ASTRA_DB_API_ENDPOINT'
+2025-04-21 23:53:10,441 [INFO] Attempting to fetch keyspace from environment variable 'ASTRA_DB_KEYSPACE'
+2025-04-21 23:53:10,441 [INFO] Detecting API environment 'prod' from supplied endpoint
+2025-04-21 23:53:14,218 [INFO] createCollection('previous_papers')
+2025-04-21 23:53:16,938 [INFO] HTTP Request: POST https://2e6be58e-cf58-4723-86ea-2deee684b015-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace "HTTP/1.1 200 OK"
+2025-04-21 23:53:16,940 [INFO] finished createCollection('previous_papers')
+2025-04-21 23:53:26,058 [INFO] cursor fetching a page: (empty page state) from chapters
+2025-04-21 23:53:27,244 [INFO] HTTP Request: POST https://2e6be58e-cf58-4723-86ea-2deee684b015-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace/chapters "HTTP/1.1 200 OK"
+2025-04-21 23:53:27,246 [INFO] cursor finished fetching a page: (empty page state) from chapters
+2025-04-21 23:53:28,905 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
